@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,10 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -61,7 +66,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                seyall: {
+                    'accent': '#00E676',
+                    'accent-light': '#69F0AE',
+                    'accent-dark': '#00C853',
+                    'gray': '#333333',
+                    'gray-light': '#4D4D4D',
+                    'gray-dark': '#1A1A1A',
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +97,61 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)'
+                    }
+                },
+                'pulse-gentle': {
+                    '0%, 100%': {
+                        opacity: '1'
+                    },
+                    '50%': {
+                        opacity: '0.8'
+                    }
+                },
+                'slide-in-right': {
+                    '0%': {
+                        transform: 'translateX(100%)',
+                        opacity: '0'
+                    },
+                    '100%': {
+                        transform: 'translateX(0)',
+                        opacity: '1'
+                    }
+                },
+                'text-scroll': {
+                    '0%': { transform: 'translateY(0)' },
+                    '10%': { transform: 'translateY(-100%)' },
+                    '20%': { transform: 'translateY(-200%)' },
+                    '30%': { transform: 'translateY(-300%)' },
+                    '40%': { transform: 'translateY(-400%)' },
+                    '50%': { transform: 'translateY(-500%)' },
+                    '60%': { transform: 'translateY(-600%)' },
+                    '70%': { transform: 'translateY(-700%)' },
+                    '80%': { transform: 'translateY(-800%)' },
+                    '90%': { transform: 'translateY(-900%)' },
+                    '100%': { transform: 'translateY(0)' }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 3s ease-in-out infinite',
+                'pulse-gentle': 'pulse-gentle 2s ease-in-out infinite',
+                'slide-in-right': 'slide-in-right 0.5s forwards',
+                'text-scroll': 'text-scroll 30s infinite'
+			},
+            fontFamily: {
+                'nunito': ['Nunito', 'sans-serif'],
+                'inter': ['Inter', 'sans-serif'],
+                'poppins': ['Poppins', 'sans-serif'],
+                'space': ['"Space Grotesk"', 'sans-serif']
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
