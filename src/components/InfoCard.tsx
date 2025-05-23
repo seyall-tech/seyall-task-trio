@@ -21,7 +21,7 @@ const InfoCard: React.FC<InfoCardProps> = ({
         className
       )}
     >
-      <div className="text-seyall-accent mb-4">{icon}</div>
+      <div className="text-seyall-accent mb-4">{icon}</div> {/* Icon uses new accent color */}
       <h3 className="text-xl font-medium text-white mb-3">{title}</h3>
       <p className="text-gray-400">{description}</p>
     </div>

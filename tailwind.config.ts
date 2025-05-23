@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -30,7 +29,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: 'hsl(var(--primary))', // This will be our new "accent"
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
@@ -45,7 +44,7 @@ export default {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
 				},
-				accent: {
+				accent: { // Keep this for shadcn compatibility, but make it less prominent
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
@@ -67,13 +66,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-                seyall: {
-                    'accent': '#00E676',
-                    'accent-light': '#69F0AE',
-                    'accent-dark': '#00C853',
-                    'gray': '#333333',
-                    'gray-light': '#4D4D4D',
-                    'gray-dark': '#1A1A1A',
+                seyall: { // Changing these to fit the monochrome theme
+                    'accent': '#E5E7EB', // Light Gray - new primary accent
+                    'accent-light': '#F3F4F6', // Lighter Gray
+                    'accent-dark': '#D1D5DB', // Darker Gray / For hover or borders
+                    'gray': '#374151', // Darker gray for text or secondary elements
+                    'gray-light': '#4B5563',
+                    'gray-dark': '#1F2937', // Very dark gray, almost black
                 }
 			},
 			borderRadius: {

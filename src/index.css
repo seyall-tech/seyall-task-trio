@@ -10,8 +10,8 @@
 
 @layer base {
   :root {
-    --background: 0 0% 3%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 3%; /* Almost black */
+    --foreground: 0 0% 98%; /* White */
 
     --card: 0 0% 5%;
     --card-foreground: 0 0% 98%;
@@ -19,8 +19,9 @@
     --popover: 0 0% 3%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 142 100% 45%;
-    --primary-foreground: 0 0% 100%;
+    /* Changed primary to a light gray, and its foreground to black for contrast */
+    --primary: 220 13% 91%; /* hsl(220, 13%, 91%) -> #E5E7EB */
+    --primary-foreground: 0 0% 9%; /* Black for text on primary */
 
     --secondary: 0 0% 9%;
     --secondary-foreground: 0 0% 98%;
@@ -28,15 +29,16 @@
     --muted: 0 0% 9%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 142 100% 45%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent remains, but less prominent, using a darker gray */
+    --accent: 220 9% 46%; /* hsl(220, 9%, 46%) -> #6B7280 */
+    --accent-foreground: 0 0% 98%; /* White text on accent */
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 15%;
     --input: 0 0% 15%;
-    --ring: 142 100% 45%;
+    --ring: 220 13% 91%; /* Ring color matches new primary */
 
     --radius: 0.5rem;
   }
@@ -52,24 +54,25 @@
     scroll-behavior: smooth;
   }
 
-  /* Custom Scrollbar */
+  /* Custom Scrollbar for monochrome theme */
   ::-webkit-scrollbar {
     width: 8px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-secondary;
+    @apply bg-seyall-gray-dark; /* Dark background for track */
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-muted-foreground rounded-full;
+    @apply bg-seyall-gray rounded-full; /* Lighter gray for thumb */
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-seyall-accent;
+    @apply bg-seyall-accent; /* New accent (light gray) for hover */
   }
 }
 
+/* ... keep existing code (shine-effect, gradient-text) */
 .shine-effect {
   position: relative;
   overflow: hidden;
@@ -102,7 +105,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #00E676, #69F0AE);
+  background: linear-gradient(90deg, #E5E7EB, #F3F4F6); /* Adjusted gradient to grays */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

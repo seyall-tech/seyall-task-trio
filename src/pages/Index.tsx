@@ -7,7 +7,7 @@ import { TaskIcon, taskIcons } from "@/components/TaskIcons";
 import InfoCard from "@/components/InfoCard";
 import HowItWorks from "@/components/HowItWorks";
 import { Button } from "@/components/ui/button";
-import { MapPin, Globe, Clock, TrendingUp } from "lucide-react";
+import { MapPin, Globe, Clock, TrendingUp, CheckCircle, DollarSign, Briefcase } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -29,14 +29,14 @@ const Index = () => {
               <span className="text-seyall-accent">yall</span>
             </h1>
             <p className="text-xl md:text-2xl lg:text-3xl mb-6 text-white/90">
-              Local help. Real quick. Just around the corner.
+              Local help. Real quick. <span className="text-seyall-accent font-semibold">You set the terms.</span>
             </p>
             
             <MultiLanguageSlogan />
             
             <div className="mt-8">
               <a href="#early-access">
-                <Button className="bg-seyall-accent hover:bg-seyall-accent-dark text-black font-medium text-lg px-8 py-6 transform transition-transform duration-200 hover:scale-105">
+                <Button className="bg-seyall-accent hover:bg-seyall-accent-dark text-seyall-gray-dark font-medium text-lg px-8 py-6 transform transition-transform duration-200 hover:scale-105">
                   Get Early Access
                 </Button>
               </a>
@@ -46,7 +46,7 @@ const Index = () => {
               🚨 Launching soon across India — from metros to mandals!
             </p>
             <p className="mt-2 text-gray-400">
-              We're unlocking local jobs, one task at a time, right in your neighborhood.
+              Unlock local jobs and tasks. <span className="font-semibold text-white">Your neighborhood, your rules.</span>
             </p>
           </div>
         </div>
@@ -79,11 +79,12 @@ const Index = () => {
               What is <span className="text-seyall-accent">Seyall</span>?
             </h2>
             <p className="text-lg md:text-xl text-gray-300">
-              Seyall is India's first freelancing app for the <span className="font-semibold text-white">offline world</span>.
+              Seyall is India's first freelancing app for the <span className="font-semibold text-white">offline world</span>. 
+              You <strong className="text-seyall-accent">choose the tasks</strong> you want to do, and <strong className="text-seyall-accent">name your price</strong>.
             </p>
             <p className="mt-4 text-gray-400">
-              Need a hand moving furniture for a few hours? Or an urgent local delivery? <br />
-              With Seyall, you can hire <span className="text-seyall-accent">real people, right in your neighborhood</span> — instantly.
+              Need a hand moving furniture? Or an urgent local delivery? <br />
+              With Seyall, find <span className="text-seyall-accent">real people, for real tasks, on your terms.</span>
             </p>
           </div>
           
@@ -101,42 +102,39 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Seyall Section */}
+      {/* Why Seyall Section - Emphasizing choice */}
       <section id="why-seyall" className="py-16 md:py-24 bg-black animate-fade-in animation-delay-400">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Choose <span className="text-seyall-accent">Seyall</span>?
             </h2>
-            <p className="text-lg text-gray-300">Fast, flexible, and fair – local help redefined.</p>
+            <p className="text-lg text-gray-300">Your Work, Your Way. Fast, flexible, and fair.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <InfoCard 
-              title="Hyperlocal by Default"
-              description="We connect you with help within your neighborhood. Zero travel means more affordable and faster assistance."
-              icon={<MapPin className="h-8 w-8" />}
+              title="You Choose the Task"
+              description="Browse local tasks and pick what fits your skills and schedule. No commitments, just opportunities."
+              icon={<Briefcase className="h-8 w-8" />}
               className="animate-fade-in animation-delay-500"
             />
-            
-            <InfoCard 
-              title="Super Flexible"
-              description="Tasks can be as short as 1 hour. Post a task at 9 AM, and potentially get it done by 10 AM."
-              icon={<Clock className="h-8 w-8" />}
+             <InfoCard 
+              title="You Set the Price"
+              description="For task posters: define your budget. For task doers: apply for tasks offering the pay you want."
+              icon={<DollarSign className="h-8 w-8" />}
               className="animate-fade-in animation-delay-600"
             />
-            
             <InfoCard 
-              title="For Everyone, Everywhere"
-              description="From students in Chennai needing quick cash to homemakers in Madurai with free time – Seyall empowers anyone to earn locally."
-              icon={<Globe className="h-8 w-8" />}
+              title="Hyperlocal & Instant"
+              description="Connect within your neighborhood. Zero travel means efficient help and earnings."
+              icon={<MapPin className="h-8 w-8" />}
               className="animate-fade-in animation-delay-700"
             />
-            
             <InfoCard 
-              title="Scalable AF"
-              description="No warehouses, no complex logistics. Just people helping people, powered by intuitive technology. Infinitely scalable."
-              icon={<TrendingUp className="h-8 w-8" />}
+              title="Super Flexible Hours"
+              description="Tasks can be as short as 1 hour. Perfect for fitting work around your life, not the other way around."
+              icon={<Clock className="h-8 w-8" />}
               className="animate-fade-in animation-delay-800"
             />
           </div>
@@ -153,24 +151,24 @@ const Index = () => {
             
             <div className="space-y-8 md:space-y-12">
               <div className="bg-black/50 p-6 rounded-lg border border-gray-800 transform transition-transform duration-300 hover:scale-105 hover:border-seyall-accent/30">
-                <h3 className="text-xl font-medium mb-3">Online Freelancers = Digital Only</h3>
-                <p className="text-gray-400">Existing platforms are great for coding or design. But what about real-world, physical tasks?</p>
+                <h3 className="text-xl font-medium mb-3 text-white">Online Freelancers = Digital Only</h3>
+                <p className="text-gray-400">Great for remote work, but what about physical, real-world tasks in your locality?</p>
               </div>
               
               <div className="bg-black/50 p-6 rounded-lg border border-gray-800 transform transition-transform duration-300 hover:scale-105 hover:border-seyall-accent/30">
-                <h3 className="text-xl font-medium mb-3">Offline Help = Unreliable & Complicated</h3>
-                <p className="text-gray-400">Finding local help usually means endless calls, no-shows, and zero accountability.</p>
+                <h3 className="text-xl font-medium mb-3 text-white">Offline Help = Unreliable & Complicated</h3>
+                <p className="text-gray-400">Finding local help often means uncertainty, no-shows, and a lack of transparency or choice in pricing.</p>
               </div>
               
               <div className="bg-black/50 p-6 rounded-lg border border-gray-800 transform transition-transform duration-300 hover:scale-105 hover:border-seyall-accent/30">
-                <h3 className="text-xl font-medium mb-3">Local Gigs = No Central Platform</h3>
-                <p className="text-gray-400">There's no simple, trusted way to find short-term, flexible work opportunities in your own community.</p>
+                <h3 className="text-xl font-medium mb-3 text-white">Local Gigs = No Central Platform for Choice</h3>
+                <p className="text-gray-400">There's no simple, trusted way to find short-term work where you control the task and the pay.</p>
               </div>
             </div>
             
             <div className="mt-12 text-center">
-              <p className="text-2xl font-medium mb-4">"Why can't I just hire someone <span className="text-seyall-accent">near me</span> to help <span className="text-seyall-accent">right now</span>?"</p>
-              <p className="text-xl text-white">With Seyall, you finally can.</p>
+              <p className="text-2xl font-medium mb-4">"Why can't I just hire someone <span className="text-seyall-accent">near me</span> for what <span className="text-seyall-accent">I need</span>, at a price that works?"</p>
+              <p className="text-xl text-white">With Seyall, you finally can. Your terms, your tasks, your price.</p>
             </div>
           </div>
         </div>
@@ -197,7 +195,7 @@ const Index = () => {
               Be the First: Get <span className="text-seyall-accent">Early Access</span>
             </h2>
             <p className="text-gray-300">
-              Join the Seyall waitlist and be the first to know when we launch in your city.
+              Join the Seyall waitlist. Be the first to discover local tasks and earning opportunities on your terms.
             </p>
           </div>
           
@@ -207,15 +205,15 @@ const Index = () => {
 
       {/* Mission & Vision Section */}
       <section className="py-16 md:py-24 bg-black relative overflow-hidden animate-fade-in animation-delay-1200">
-        <div className="absolute inset-0 bg-gradient-to-b from-seyall-accent/10 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-seyall-accent/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
-              From Metros to Mandals — <br />We’re Bringing Work <span className="text-seyall-accent">Home</span>.
+              From Metros to Mandals — <br />Empowering Local Work, <span className="text-seyall-accent">Your Way</span>.
             </h2>
             
             <p className="text-lg text-gray-300">
-              We believe opportunity shouldn't require migration. Seyall brings flexible income right to your street, your town, your block.
+              Opportunity shouldn't require migration. Seyall brings flexible income and help right to your community, on terms you define.
             </p>
             
             <div className="mt-12">

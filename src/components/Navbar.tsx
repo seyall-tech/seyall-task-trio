@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -31,7 +30,7 @@ const Navbar = () => {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-black/90 backdrop-blur-md py-3 shadow-lg"
+          ? "bg-black/90 backdrop-blur-md py-3 shadow-lg border-b border-seyall-gray-dark"
           : "bg-transparent py-5"
       }`}
     >
@@ -66,7 +65,7 @@ const Navbar = () => {
           <a href="#early-access">
             <Button
               variant="default"
-              className="bg-seyall-accent hover:bg-seyall-accent-dark text-black font-medium"
+              className="bg-seyall-accent hover:bg-seyall-accent-dark text-seyall-gray-dark font-medium"
             >
               Get Early Access
             </Button>
@@ -116,7 +115,7 @@ const Navbar = () => {
             <a href="#early-access" onClick={() => setMobileMenuOpen(false)}>
               <Button
                 variant="default"
-                className="bg-seyall-accent hover:bg-seyall-accent-dark text-black font-medium w-full"
+                className="bg-seyall-accent hover:bg-seyall-accent-dark text-seyall-gray-dark font-medium w-full"
               >
                 Get Early Access
               </Button>
