@@ -1,5 +1,5 @@
 
-import { Box, Car, Gate, Cleaning, Stall, Elderly } from "lucide-react";
+import { Box, Car, Construction, Sparkles, Store, Accessibility } from "lucide-react";
 
 interface TaskIconProps {
   name: string;
@@ -22,7 +22,7 @@ export const TaskIcon: React.FC<TaskIconProps> = ({ name, icon, description }) =
 export const taskIcons = [
   {
     name: "Event Setup",
-    icon: <Stall className="h-6 w-6" />,
+    icon: <Store className="h-6 w-6" />,
     description: "Get help with event setups, decorations and temporary assistance",
   },
   {
@@ -32,17 +32,17 @@ export const taskIcons = [
   },
   {
     name: "Furniture & Repair",
-    icon: <Gate className="h-6 w-6" />,
+    icon: <Construction className="h-6 w-6" />,
     description: "Help with small repairs and furniture assembly",
   },
   {
     name: "Cleaning Help",
-    icon: <Cleaning className="h-6 w-6" />,
+    icon: <Sparkles className="h-6 w-6" />,
     description: "One-time cleaning assistance for homes or offices",
   },
   {
     name: "Elderly Care",
-    icon: <Elderly className="h-6 w-6" />,
+    icon: <Accessibility className="h-6 w-6" />,
     description: "Short-duration assistance for elderly relatives",
   },
   {
