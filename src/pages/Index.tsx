@@ -72,7 +72,7 @@ const Index = () => {
       </section>
 
       {/* What is Seyall Section */}
-      <section id="what-is-seyall" className="py-16 md:py-24 bg-gradient-to-b from-black to-seyall-gray-dark animate-fade-in animation-delay-200">
+      <section id="what-is-seyall" className="py-16 md:py-24 bg-gradient-to-b from-black to-seyall-gray-dark animate-scroll-reveal-up [animation-delay:200ms]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -90,20 +90,20 @@ const Index = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             {taskIcons.map((task, index) => (
-              <div key={index} className="animate-fade-in animation-delay-stagger">
-                <TaskIcon
-                  name={task.name}
-                  icon={task.icon}
-                  description={task.description}
-                />
-              </div>
+              <TaskIcon
+                key={index}
+                name={task.name}
+                icon={task.icon}
+                description={task.description}
+                className={`animate-scroll-reveal-up [animation-delay:${200 + index * 100}ms]`}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {/* Why Seyall Section - Emphasizing choice */}
-      <section id="why-seyall" className="py-16 md:py-24 bg-black animate-fade-in animation-delay-400">
+      <section id="why-seyall" className="py-16 md:py-24 bg-black animate-scroll-reveal-up [animation-delay:400ms]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -117,32 +117,32 @@ const Index = () => {
               title="You Choose the Task"
               description="Browse local tasks and pick what fits your skills and schedule. No commitments, just opportunities."
               icon={<Briefcase className="h-8 w-8" />}
-              className="animate-fade-in animation-delay-500"
+              className="animate-scroll-reveal-up [animation-delay:500ms]"
             />
              <InfoCard 
               title="You Set the Price"
               description="For task posters: define your budget. For task doers: apply for tasks offering the pay you want."
               icon={<DollarSign className="h-8 w-8" />}
-              className="animate-fade-in animation-delay-600"
+              className="animate-scroll-reveal-up [animation-delay:600ms]"
             />
             <InfoCard 
               title="Hyperlocal & Instant"
               description="Connect within your neighborhood. Zero travel means efficient help and earnings."
               icon={<MapPin className="h-8 w-8" />}
-              className="animate-fade-in animation-delay-700"
+              className="animate-scroll-reveal-up [animation-delay:700ms]"
             />
             <InfoCard 
               title="Super Flexible Hours"
               description="Tasks can be as short as 1 hour. Perfect for fitting work around your life, not the other way around."
               icon={<Clock className="h-8 w-8" />}
-              className="animate-fade-in animation-delay-800"
+              className="animate-scroll-reveal-up [animation-delay:800ms]"
             />
           </div>
         </div>
       </section>
 
       {/* The Problem Today Section */}
-      <section className="py-16 md:py-24 bg-seyall-gray-dark animate-fade-in animation-delay-600">
+      <section className="py-16 md:py-24 bg-seyall-gray-dark animate-scroll-reveal-up [animation-delay:600ms]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
@@ -175,7 +175,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 md:py-24 bg-black animate-fade-in animation-delay-800">
+      <section className="py-16 md:py-24 bg-black animate-scroll-reveal-up [animation-delay:800ms]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -188,7 +188,7 @@ const Index = () => {
       </section>
 
       {/* Early Access Sign-up Section */}
-      <section id="early-access" className="py-16 md:py-24 bg-gradient-to-b from-black to-seyall-gray-dark animate-fade-in animation-delay-1000">
+      <section id="early-access" className="py-16 md:py-24 bg-gradient-to-b from-black to-seyall-gray-dark animate-scroll-reveal-up [animation-delay:1000ms]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -204,7 +204,7 @@ const Index = () => {
       </section>
 
       {/* Mission & Vision Section */}
-      <section className="py-16 md:py-24 bg-black relative overflow-hidden animate-fade-in animation-delay-1200">
+      <section className="py-16 md:py-24 bg-black relative overflow-hidden animate-scroll-reveal-up [animation-delay:1200ms]">
         <div className="absolute inset-0 bg-gradient-to-b from-seyall-accent/5 to-transparent"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
