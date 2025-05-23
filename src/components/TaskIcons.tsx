@@ -1,14 +1,21 @@
 import { Box, Car, Construction, Sparkles, Store, Accessibility } from "lucide-react";
+import { cn } from "@/lib/utils"; // Import the cn utility
 
 interface TaskIconProps {
   name: string;
   icon: React.ReactNode;
   description: string;
+  className?: string; // Add className as an optional prop
 }
 
-export const TaskIcon: React.FC<TaskIconProps> = ({ name, icon, description }) => {
+export const TaskIcon: React.FC<TaskIconProps> = ({ name, icon, description, className }) => {
   return (
-    <div className="flex flex-col items-center p-4 rounded-lg hover:bg-seyall-gray/60 transition-all duration-300 ease-in-out transform hover:scale-105 group">
+    <div 
+      className={cn(
+        "flex flex-col items-center p-4 rounded-lg hover:bg-seyall-gray/60 transition-all duration-300 ease-in-out transform hover:scale-105 group",
+        className // Apply the passed className here
+      )}
+    >
       <div className="bg-seyall-gray-dark p-4 rounded-full mb-3 text-seyall-accent transition-transform duration-300 group-hover:scale-110">
         {icon}
       </div>
